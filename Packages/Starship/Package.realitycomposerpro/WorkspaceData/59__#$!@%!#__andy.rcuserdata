@@ -1,0 +1,61 @@
+{
+  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
+  "openSceneRelativePaths" : [
+    "Earth.usda",
+    "Vessel.usda"
+  ],
+  "recentIdentifiers" : {
+
+  },
+  "sceneCameraHistory" : {
+    "2E819873-65D8-4396-AD25-B9505299C356" : [
+      {
+        "date" : 741818094.223723,
+        "title" : "Untitled",
+        "transform" : [
+          0.99999994,
+          0,
+          -0,
+          0,
+          -0,
+          0.8721228,
+          -0.4892869,
+          0,
+          0,
+          0.4892869,
+          0.8721228,
+          0,
+          -0.0034265516,
+          27.546078,
+          36.77737,
+          1
+        ]
+      }
+    ],
+    "392FEE31-C76B-4D4A-B7B2-0FC3236881F8" : [
+      {
+        "date" : 741818096.762559,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          -0,
+          0,
+          -0,
+          0.8657363,
+          -0.5005005,
+          0,
+          0,
+          0.5005005,
+          0.8657363,
+          0,
+          0.18697892,
+          3.1189063,
+          3.654163,
+          1
+        ]
+      }
+    ]
+  },
+  "selectedSceneRelativePath" : "Vessel.usda"
+}

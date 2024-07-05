@@ -1,0 +1,241 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Secondary_Hull", "Nacelle_Connector_2", "AB153043_6990_40DD_962C_7ECC9880C7CD"]
+    float3 xformOp:translate = (0, 0.15, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "Group" (
+        active = true
+    )
+    {
+        float3 xformOp:scale = (0.3, 0.3, 0.3)
+        float3 xformOp:translate = (0.2, 1.5, -0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Primary_Hull" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0.08726646, 0, 0)
+            }
+        )
+        {
+            rel material:binding = </Root/Group/Primary_Hull/DefaultMaterial>
+            double radius = 0.2
+            quatf xformOp:orient = (0.99904823, 0.043619134, 0, 0)
+            float3 xformOp:scale = (1, 0.9999999, 0.9999999)
+            float3 xformOp:translate = (-0.012127241, 0.18865842, 0.0033805668)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                prepend token outputs:surface.connect = </Root/Group/Primary_Hull/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Cylinder "Connecting_Hull" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0.030612294, -0.032680146, 1.0481237)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.4
+            rel material:binding = </Root/Group/Connecting_Hull/DefaultMaterial>
+            double radius = 0.15
+            quatf xformOp:orient = (0.86545163, 0.021424947, -0.006486958, 0.5004921)
+            float3 xformOp:scale = (0.5, 0.49999994, 0.49999994)
+            float3 xformOp:translate = (0.20530532, 0.036839798, -0.0079131685)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                prepend token outputs:surface.connect = </Root/Group/Connecting_Hull/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Capsule "Nacelle_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (-1.1102232e-16, 3.72529e-9, 1.5707964)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.5
+            rel material:binding = </Root/Group/Nacelle_1/DefaultMaterial>
+            double radius = 0.03
+            quatf xformOp:orient = (0.70710677, -1.3170889e-9, 1.3170889e-9, 0.7071067)
+            float3 xformOp:scale = (0.9999998, 0.9999998, 0.9999998)
+            float3 xformOp:translate = (0.46652615, 0.14456066, 0.16886723)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                prepend token outputs:surface.connect = </Root/Group/Nacelle_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Capsule "Nacelle_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (4.4408926e-16, -1.490116e-8, 1.5707964)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.5
+            rel material:binding = </Root/Group/Nacelle_2/DefaultMaterial>
+            double radius = 0.03
+            quatf xformOp:orient = (0.70710677, 5.268356e-9, -5.268356e-9, 0.70710677)
+            float3 xformOp:scale = (0.99999964, 0.99999964, 0.99999964)
+            float3 xformOp:translate = (0.46191424, 0.14456001, -0.16275084)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/Group/Nacelle_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Capsule "Nacelle_Connector_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0.7853981, 0.26179942, 7.713409e-9)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.2
+            rel material:binding = </Root/Group/Nacelle_Connector_1/DefaultMaterial>
+            double radius = 0.01
+            quatf xformOp:orient = (0.91597563, 0.37940955, 0.1205905, -0.0499502)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0.36021, 0.070353314, 0.079280354)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                prepend token outputs:surface.connect = </Root/Group/Nacelle_Connector_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Capsule "Nacelle_Connector_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (2.3561945, -0.2617994, 4.6280448e-8)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.2
+            rel material:binding = </Root/Group/Nacelle_Connector_2/DefaultMaterial>
+            double radius = 0.01
+            quatf xformOp:orient = (0.37940958, 0.91597563, -0.049950197, 0.120590486)
+            float3 xformOp:scale = (1, 1, 1.0000001)
+            float3 xformOp:translate = (0.36021, 0.07034999, -0.10715841)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/Group/Nacelle_Connector_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Cylinder "Secondary_Hull" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 1.5707964)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.35000000000000003
+            rel material:binding = </Root/Group/Secondary_Hull/DefaultMaterial>
+            double radius = 0.06
+            quatf xformOp:orient = (0.70710677, 0, 0, 0.7071067)
+            float3 xformOp:scale = (0.9999998, 0.9999998, 0.9999998)
+            float3 xformOp:translate = (0.437543, -0.011572272, -0.013050869)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                prepend token outputs:surface.connect = </Root/Group/Secondary_Hull/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+    }
+}
+

@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1CA58582C3721EA000B1E32 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = A1CA58572C3721EA000B1E32 /* RealityKitContent */; };
+		A143FE672C373CF400081BC1 /* Earth in Resources */ = {isa = PBXBuildFile; fileRef = A143FE642C373CF400081BC1 /* Earth */; };
+		A143FE682C373CF400081BC1 /* Starship in Resources */ = {isa = PBXBuildFile; fileRef = A143FE652C373CF400081BC1 /* Starship */; };
 		A1CA585A2C3721EA000B1E32 /* SampleOrbitAnimationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA58592C3721EA000B1E32 /* SampleOrbitAnimationAppApp.swift */; };
 		A1CA585C2C3721EA000B1E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA585B2C3721EA000B1E32 /* ContentView.swift */; };
 		A1CA585E2C3721EA000B1E32 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA585D2C3721EA000B1E32 /* ImmersiveView.swift */; };
-		A1CA58602C3721EA000B1E32 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = A1CA585F2C3721EA000B1E32 /* ImageBasedLighting.skybox */; };
 		A1CA58622C3721ED000B1E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CA58612C3721ED000B1E32 /* Assets.xcassets */; };
 		A1CA58652C3721ED000B1E32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CA58642C3721ED000B1E32 /* Preview Assets.xcassets */; };
+		A1E5CE1E2C373F4E00B54719 /* Starship in Frameworks */ = {isa = PBXBuildFile; productRef = A1E5CE1D2C373F4E00B54719 /* Starship */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1CA58522C3721EA000B1E32 /* SampleOrbitAnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOrbitAnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1CA58562C3721EA000B1E32 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		A143FE632C373C3700081BC1 /* SampleOrbitAnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SampleOrbitAnimationApp.app; path = "/Users/andy/Desktop/SampleOrbitAnimationApp/build/Debug-xros/SampleOrbitAnimationApp.app"; sourceTree = "<absolute>"; };
+		A143FE642C373CF400081BC1 /* Earth */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Earth; sourceTree = "<group>"; };
+		A143FE652C373CF400081BC1 /* Starship */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Starship; sourceTree = "<group>"; };
 		A1CA58592C3721EA000B1E32 /* SampleOrbitAnimationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOrbitAnimationAppApp.swift; sourceTree = "<group>"; };
 		A1CA585B2C3721EA000B1E32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1CA585D2C3721EA000B1E32 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
-		A1CA585F2C3721EA000B1E32 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
 		A1CA58612C3721ED000B1E32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1CA58642C3721ED000B1E32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1CA58662C3721ED000B1E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,28 +34,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CA58582C3721EA000B1E32 /* RealityKitContent in Frameworks */,
+				A1E5CE1E2C373F4E00B54719 /* Starship in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A143FE662C373CF400081BC1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A143FE642C373CF400081BC1 /* Earth */,
+				A143FE652C373CF400081BC1 /* Starship */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		A1CA58492C3721EA000B1E32 = {
 			isa = PBXGroup;
 			children = (
 				A1CA58542C3721EA000B1E32 /* SampleOrbitAnimationApp */,
-				A1CA58552C3721EA000B1E32 /* Packages */,
-				A1CA58532C3721EA000B1E32 /* Products */,
+				A143FE662C373CF400081BC1 /* Packages */,
+				A1E5CE1C2C373F4E00B54719 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		A1CA58532C3721EA000B1E32 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1CA58522C3721EA000B1E32 /* SampleOrbitAnimationApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A1CA58542C3721EA000B1E32 /* SampleOrbitAnimationApp */ = {
@@ -63,20 +65,11 @@
 				A1CA58592C3721EA000B1E32 /* SampleOrbitAnimationAppApp.swift */,
 				A1CA585B2C3721EA000B1E32 /* ContentView.swift */,
 				A1CA585D2C3721EA000B1E32 /* ImmersiveView.swift */,
-				A1CA585F2C3721EA000B1E32 /* ImageBasedLighting.skybox */,
 				A1CA58612C3721ED000B1E32 /* Assets.xcassets */,
 				A1CA58662C3721ED000B1E32 /* Info.plist */,
 				A1CA58632C3721ED000B1E32 /* Preview Content */,
 			);
 			path = SampleOrbitAnimationApp;
-			sourceTree = "<group>";
-		};
-		A1CA58552C3721EA000B1E32 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				A1CA58562C3721EA000B1E32 /* RealityKitContent */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 		A1CA58632C3721ED000B1E32 /* Preview Content */ = {
@@ -85,6 +78,13 @@
 				A1CA58642C3721ED000B1E32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1E5CE1C2C373F4E00B54719 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +104,10 @@
 			);
 			name = SampleOrbitAnimationApp;
 			packageProductDependencies = (
-				A1CA58572C3721EA000B1E32 /* RealityKitContent */,
+				A1E5CE1D2C373F4E00B54719 /* Starship */,
 			);
 			productName = SampleOrbitAnimationApp;
-			productReference = A1CA58522C3721EA000B1E32 /* SampleOrbitAnimationApp.app */;
+			productReference = A143FE632C373C3700081BC1 /* SampleOrbitAnimationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,9 @@
 				Base,
 			);
 			mainGroup = A1CA58492C3721EA000B1E32;
-			productRefGroup = A1CA58532C3721EA000B1E32 /* Products */;
+			packageReferences = (
+			);
+			productRefGroup = A1CA58492C3721EA000B1E32;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -148,9 +150,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A143FE672C373CF400081BC1 /* Earth in Resources */,
 				A1CA58622C3721ED000B1E32 /* Assets.xcassets in Resources */,
+				A143FE682C373CF400081BC1 /* Starship in Resources */,
 				A1CA58652C3721ED000B1E32 /* Preview Assets.xcassets in Resources */,
-				A1CA58602C3721EA000B1E32 /* ImageBasedLighting.skybox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,9 +368,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A1CA58572C3721EA000B1E32 /* RealityKitContent */ = {
+		A1E5CE1D2C373F4E00B54719 /* Starship */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
+			productName = Starship;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

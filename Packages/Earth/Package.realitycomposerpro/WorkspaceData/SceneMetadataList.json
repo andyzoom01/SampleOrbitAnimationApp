@@ -1,0 +1,23 @@
+{
+  "3C48CDA3-1C64-41AC-AA76-612E2D4ABF96" : {
+    "objectMetadataList" : [
+      [
+        "3C48CDA3-1C64-41AC-AA76-612E2D4ABF96",
+        "Root",
+        "Earth"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "3C48CDA3-1C64-41AC-AA76-612E2D4ABF96",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
