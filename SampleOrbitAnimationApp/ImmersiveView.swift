@@ -27,37 +27,42 @@ struct ImmersiveView: View {
             }
             
             //Get Earth model
-            let earthEntity = await createEarthModel()
+           // let earthEntity = await createEarthModel()
             
             //Get Starship model
             let starshipEntity = await createStarshipModel()
             
             // Retrieve the attachment with the "Exit Button" identifier as an entity.
            guard let exitButton = attachments.entity(for: "Exit Button") else { return }
-            exitButton.setPosition([0.0, 0.5, -2.0], relativeTo: earthEntity)
+           // exitButton.setPosition([0.0, 0.5, -2.0], relativeTo: earthEntity)
             exitButton.setScale([4.0, 4.0, 4.0], relativeTo: starshipEntity)
+            exitButton.setPosition([0.0, 0.5, -2.0], relativeTo: starshipEntity)
             
             //Add to RealityView
             content.add(skyBoxEntity)
             content.add(starshipEntity)
-            content.add(earthEntity)
+            //content.add(earthEntity)
             content.add(exitButton)
             
            // let starshipOrbitEntity : Entity = Entity()
             
            // starshipOrbitEntity.addChild(starshipEntity)
             
-            //Playing an orbit transform animation
-            let orbit = OrbitAnimation(name: "Orbit",
-                                       duration: 30,
-                                       axis: [0, 1, 0],
-                                       startTransform: starshipEntity.transform,
-                                       bindTarget: .transform,
-                                       repeatMode: .repeat)
-            
-            if let animation = try? AnimationResource.generate(with: orbit) {
-                starshipEntity.playAnimation(animation)
+            if let orbitingVessel = starshipEntity.findEntity(named: "Group") {
+                //Playing an orbit transform animation
+                let orbit = OrbitAnimation(name: "Orbit",
+                                           duration: 120,
+                                           axis: [0, 1, 0],
+                                           startTransform: orbitingVessel.transform,
+                                           bindTarget: .transform,
+                                           repeatMode: .repeat)
+                
+                if let animation = try? AnimationResource.generate(with: orbit) {
+                    orbitingVessel.playAnimation(animation)
+                }
             }
+            
+            
                 
             //content.add(starshipOrbitEntity)
                 
@@ -126,7 +131,7 @@ struct ImmersiveView: View {
     }
      
     private func createStarshipModel () async -> Entity {
-        guard let starshipEntity = try? await Entity(named: "Vessel", in: starshipBundle) else {
+        guard let starshipEntity = try? await Entity(named: "OrbitingVessel", in: starshipBundle) else {
             fatalError("Cannot load Starship model")
         }
         return starshipEntity

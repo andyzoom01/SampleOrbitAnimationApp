@@ -24,7 +24,8 @@
     "objectMetadataList" : [
       [
         "6B875BB9-6794-402E-A664-43E6962FB206",
-        "Root"
+        "Root",
+        "Group"
       ],
       {
         "isExpanded" : true,
@@ -32,8 +33,7 @@
       },
       [
         "6B875BB9-6794-402E-A664-43E6962FB206",
-        "Root",
-        "Group"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -67,6 +67,48 @@
       [
         "444A3267-3E23-47FE-BD65-B81879FE78DC",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "AC61AE9C-244C-455C-8C21-A62250F18A6E" : {
+    "objectMetadataList" : [
+      [
+        "AC61AE9C-244C-455C-8C21-A62250F18A6E",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AC61AE9C-244C-455C-8C21-A62250F18A6E",
+        "Root",
+        "Earth",
+        "Vessel"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AC61AE9C-244C-455C-8C21-A62250F18A6E",
+        "Root",
+        "Earth"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AC61AE9C-244C-455C-8C21-A62250F18A6E",
+        "Root",
+        "Earth",
+        "Vessel",
+        "Group"
       ],
       {
         "isExpanded" : true,
